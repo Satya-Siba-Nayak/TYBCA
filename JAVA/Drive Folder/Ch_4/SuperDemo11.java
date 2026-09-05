@@ -1,0 +1,45 @@
+
+import java.io.*;
+class E
+{
+	String X = "JAVA";
+	E()
+	{
+		System.out.println( "In the base class Constructor" );
+	}
+	E(int a, int b)
+	{
+		int res= a+b;
+		System.out.println( "Addition is"+res);
+	}
+	int multi(int a, int b)
+	{
+		int res= a*b;
+		return res;
+	}
+} 
+class F extends E
+{
+	String X = "COBAL";
+	F()
+	{
+		//super();
+		super(10,20);
+	}
+	void display ()
+	{
+		
+		System.out.println( X );
+		System.out.println(super.X);
+		int multiply = super.multi(10,20);
+		System.out.println( "Multiplication is"+multiply);
+	}
+}
+class SuperDemo11
+{
+	public static void main(String[] args) 
+	{
+		F f1 = new F();
+		f1.display();
+	}
+} 

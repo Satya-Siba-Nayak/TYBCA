@@ -1,0 +1,49 @@
+// Program to find the position of occurence of a given no. in the array
+
+import java.io.*;
+import java.util.*;
+class SortingArray
+{
+	public static void main (String args[]) throws IOException
+	{
+
+		int i=0,j,t;
+		Scanner sc = new Scanner(System.in);
+		final int s=6;
+		int arr[] = new int[s];
+		System.out.println("Enter the "+ s+" Elements in the array  one by one :: \n");
+		try{
+			for (i=0 ; i<s ;i++)
+				{
+						arr[i] = sc.nextInt();
+				}
+			System.out.println("Original elements of the array ::\n");
+			for (i=0 ; i<s ;i++)
+				{
+						System.out.println(arr[i] + "\t");
+				}
+			/* Main Logic Starts ....*/
+			for(i=0;i<s;i++)
+			{
+				for(j=i+1;j<s;j++)
+				{
+					if(arr[i]> arr[j])
+					{
+						t=arr[i];
+						arr[i]= arr[j];
+						arr[j]=t;
+					}
+				}
+			}
+			System.out.println("Sorted Array is::");
+			for(i=0;i<s;i++)
+			{
+				System.out.println(arr[i]+"\t");
+			}
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+}

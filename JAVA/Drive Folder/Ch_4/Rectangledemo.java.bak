@@ -1,0 +1,52 @@
+
+// Program to illustrate the " Use Of Constructor " concept
+
+import java.io.*;
+class Rectangle1
+{
+	int length , width;
+	Rectangle1 (int a , int b)	// Constructor
+	{
+		length = a; 
+		width = b ;
+
+	}
+	int rectangleArea() // method declaration for calculate Area 
+	{
+		int area;
+		area = length * width ;
+		return area ;
+	}
+
+	int rectanglePerimeter( )  // method declaration for calculate Perimeter
+	{
+		int perimeter ;
+		perimeter = 2 * (length + width);
+		return perimeter ;
+	}
+}
+
+
+class Rectangledemo
+{
+	public static void main (String args[]) throws IOException
+	{
+		 /* BufferedReader in = new BufferedReader (new InputStreamReader (System.in));
+		System.out.println("Enter the lenth of first rectangle");
+			String text1 = in.readLine();
+			int len = Integer.parseInt(text1);
+
+		System.out.println("Enter the width of first rectangle") ;
+			String text2 = in.readLine();
+			int wid = Integer.parseInt(text1) ; */
+
+		Rectangle1 r1 = new Rectangle1 (length, width);
+		System.out.println("Area of Rectangle == " + r1.rectangleArea());
+		System.out.println("Perimeter of Rectangle == " + r1.rectanglePerimeter());
+
+	    Rectangle1 r2 = new Rectangle1 (7, 4);
+		System.out.println("Area of  Second Rectangle == " + r2.rectangleArea());
+		System.out.println("Perimeter of  Second Rectangle == " + r2.rectanglePerimeter());
+
+	}
+}

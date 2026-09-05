@@ -1,0 +1,32 @@
+import java.util.*;
+class PrimeSumation{
+public static void main(String args[]){
+	int n = 10;
+	int[] arr = new int[n];
+	for(int i =0; i < n; i++){
+		arr[i] = 0;
+	}
+
+	for(int i = 2; i < n; i++){
+		for(int j = 2; j < i; j++){
+			if(i % j == 0){
+				arr[i] = 1;
+				break;
+			}
+			
+		}
+	}
+	
+	int sum = 0;
+	int cnt = 0;
+	for(int i = 2; i < n; i++){
+		if(arr[i] == 0){
+			System.out.print(i + " ");
+			sum += i;
+			cnt++;
+		}
+		if(cnt >= 10)break;
+	}
+	System.out.println("\n sum of first 10prime number is " + sum);
+}
+}

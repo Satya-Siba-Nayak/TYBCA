@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+class NestedForTrianleNumber
+{
+	public static void main(String[] args)
+	{
+		int line,row,col,val,b;
+		Scanner sc = new Scanner(System.in); 
+		System.out.println("\n\nEnter the number of lines:= ");
+		line= sc.nextInt();
+		System.out.println("\n The Pattern is \n");
+		/* Logic to print first half pattern demarketed */
+		for(row=1;row<=line; row++)
+		{
+			val=row;
+			for (b=1; b<=line-row;b++)
+				System.out.print("  ");
+
+			/*for(col= 1; col<2*row+1; col +=2)
+				System.out.print("  "+ val++);*/
+
+			for(col= 1; col<=row; col++)
+				System.out.print("  "+ val++);
+
+			/* Logic to print Scond half pattern demarketed */
+			val=val-2;
+			for(b=1;b<=row-1;b++)
+				System.out.print("  "+ val--);			
+			System.out.println();
+		}
+	}
+}

@@ -1,0 +1,72 @@
+
+// Program to illustrate the " Constructor Overloading " concept and Also Demonstrate on this keyword
+
+import java.io.*;
+class Rectangle1
+{
+	int length =12  , width;
+	public Rectangle1(int length , int w2)	//  lentgh = 10 accepted from constructor
+	{
+		//this.length = length;   // this keyword differentiate local and member variable i.e length
+		System.out.println("Length" + length); // Print Current value of length accepted from Constructor
+		System.out.println("Length" + this.length); // Print the value of length throgh current object of class by this keyword
+		int area = length * w2 ;
+		System.out.println("Area of Rectangle == " + area);
+		width = w2 ;
+
+	}
+
+	/*Rectangle1 (int len2)	// Constructor but different Signature
+	{
+		length = len2; 
+		this.width = 5 ;
+
+	} 
+	int rectangleArea() // method declaration for calculate Area 
+	{
+		int area;
+		area = length * width ;
+		return area ;
+	} 
+
+	 int rectanglePerimeter( )  // method declaration for calculate Perimeter
+	{
+		int perimeter ;
+		perimeter = 2 * (length + width);
+		return perimeter ;
+	} */
+}
+
+
+class Rectangledemo2
+{
+	public static void main(String args[]) throws IOException
+	{
+		Rectangle1 r1 = new Rectangle1(10,5);
+		/*System.out.println("Area of First Rectangle == " + r1.rectangleArea());
+		System.out.println("Perimeter of First Rectangle == " + r1.rectanglePerimeter());
+
+		Rectangle1 r2 = new Rectangle1 ( 10 );
+		System.out.println("Area of  Second Rectangle == " + r2.rectangleArea());
+		System.out.println("Perimeter of  Second Rectangle == " + r2.rectanglePerimeter()); */
+
+	}
+}
+/*
+1--Out Put  through this keyword
+
+Length10
+Length12
+Area of Rectangle == 50  
+
+2--Out Put  through Constructor Overloading demo(After removing all comments)
+
+Length10
+Length12
+Area of Rectangle == 50
+Area of First Rectangle == 60
+Perimeter of First Rectangle == 34
+Area of  Second Rectangle == 50
+Perimeter of  Second Rectangle == 30
+
+*/

@@ -1,0 +1,66 @@
+// declare a matrix of 3*3 and display the digonal elements and adisplay the sum of digonal elements in the array
+
+import java.io.*;
+import java.util.*;
+class SumPrimSecondElementArray
+{
+	public static void main (String args[]) throws IOException
+	{
+		Scanner sc = new Scanner(System.in);
+		int a[][] = new int[3][3] ;
+		int PriSum=0, SecondSum=0;
+		System.out.println("Enter the element one by one :: ");
+		for (int i=0 ; i<3 ; i++)
+		{
+			for (int j=0 ; j<3 ;j++)
+			{
+				a[ i ][ j ] =sc.nextInt();
+			}
+		}
+
+		System.out.println("Array are :: ");
+		for (int i=0 ; i<3 ; i++)
+		{
+			for (int j=0 ; j<3 ;j++)
+			{
+				System.out.print(a[i][j]+" "+"\t");
+			}
+				System.out.println();
+		}
+		System.out.println ("Addition of Primary Digonal Element are ::") ;
+		for (int i=0 ; i<3 ;i++)
+		{
+			for (int j=0 ; j<3 ; j++)
+			{
+				if (i==j)
+				{
+					
+					PriSum=PriSum+ a[i][j];
+				}
+				//System.out.println("Primary Diagonal Elements are:"+a[ i ][ j ]);
+			}
+			
+		}
+		System.out.println("Sum of the Primary Diagonal Elements are:"+ PriSum);
+		
+		/* Secondary digonal logic */
+
+		System.out.println ("Addition of Secondary Digonal Element are ::") ;
+		for (int i=0 ; i<3 ;i++)
+		{
+			for (int j=0 ; j<3 ; j++)
+			{
+				if (i+j==2)
+				{
+					
+					SecondSum=SecondSum+ a[i][j];
+				}
+				//System.out.println("Secondary Diagonal Elements are:"+a[ i ][ j ]);
+			}
+			
+		}
+		System.out.println("Sum of the Secondary Diagonal Elements are:"+ SecondSum);
+		
+	}
+
+}

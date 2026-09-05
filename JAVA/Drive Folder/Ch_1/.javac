@@ -1,0 +1,34 @@
+import java.util.*;
+class Q7{
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q7 obj = new Q7();
+	System.out.println( "Enter String: " );
+	String str = sc.nextLine();
+
+	int numbers = 0, letters = 0, spaces = 0, other_char = 0;
+	for(int i = 0; i < str.length(); i++){
+		if(str.charAt(i) >= '0' && str.charAt(i) <= '9'){
+			numbers++;
+		}
+		else if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z'){
+			letters++;
+		}
+		else if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'){
+			letters++;
+		}
+		else if(str.charAt(i) == ' ' ){
+			spaces++;
+		}
+		else{
+			other_char++;
+		}
+	}
+
+	System.out.println("letters are : " + letters);
+	System.out.println("numbers are : " + numbers);
+	System.out.println("spaces are : " + spaces);
+	System.out.println("other characters are : " + other_char);	
+}
+}

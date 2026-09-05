@@ -1,0 +1,52 @@
+
+// Program to illustrate the " Constructor Overloading " concept
+
+import java.io.*;
+class Rectangle1
+{
+	int length =12  , width;
+	Rectangle1 (int length , int w2)	// Constructor
+	{
+		//this.length = length;   // this keyword differentiate local and member variable i.e length
+		System.out.println("Length" + length);
+				System.out.println("Length" + this.length);
+		width = w2 ;
+
+	}
+
+/*	Rectangle1 (int len2)	// Constructor but different Signature
+	{
+		length = len2; 
+		width = 5 ;
+
+	} */
+	int rectangleArea() // method declaration for calculate Area 
+	{
+		int area;
+		area = length * width ;
+		return area ;
+	}
+
+	/* int rectanglePerimeter( )  // method declaration for calculate Perimeter
+	{
+		int perimeter ;
+		perimeter = 2 * (length + width);
+		return perimeter ;
+	} */
+}
+
+
+class Rectangledemo2
+{
+	public static void main (String args[]) throws IOException
+	{
+		Rectangle1 r1 = new Rectangle1 (10 , 5);
+		System.out.println("Area of Rectangle == " + r1.rectangleArea());
+		// System.out.println("Perimeter of Rectangle == " + r1.rectanglePerimeter());
+
+	    /*	Rectangle1 r2 = new Rectangle1 ( 10 );
+		System.out.println("Area of  Second Rectangle == " + r2.rectangleArea());
+		System.out.println("Perimeter of  Second Rectangle == " + r2.rectanglePerimeter()); */
+
+	}
+}

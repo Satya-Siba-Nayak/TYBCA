@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+class AdditionNumber
+{
+	public static void main(String args[]) throws IOException	// Any Input is in read as a String in Java
+	{
+		//int no1=10,no2=20;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter numebr one");
+		Float no1= sc.nextFloat();
+
+		System.out.println("Enter numebr two");
+		Float no2= sc.nextFloat();
+		
+		Float res= no1+no2;
+		System.out.println("Addition is    "+res);
+	}
+}

@@ -1,0 +1,30 @@
+// Programm illustrate  the inheritance of a variable
+
+import java.io.*;
+class A
+{
+	int i;
+	int j;
+} 
+class B extends A
+{
+}
+class C extends B
+{
+	int k ;
+}
+class InherVariableDemo
+{
+	public static void main(String[] args) 
+	{
+		C c1 = new C();
+		c1.i = 11;
+		c1.j= 22;
+		c1.k = 66;
+		System.out.println("Value of i in classs C ::" + c1.i);
+		System.out.println("Value of j in classs C ::" + c1.j);
+		System.out.println("Value of k in classs C ::" + c1.k);
+
+	}
+} 
+

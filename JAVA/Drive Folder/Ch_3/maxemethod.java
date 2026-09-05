@@ -1,0 +1,43 @@
+
+// Program to illustrate the "Method  Overloading " concept
+
+import java.io.*;
+class maxemethod
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader in = new BufferedReader (new InputStreamReader (System.in));
+		System.out.println("Enter the A value ::");
+		String text = in.readLine();
+		int a = Integer.parseInt(text);
+
+		System.out.println("Enter the B value ::");
+		String text1 = in.readLine();
+		int b = Integer.parseInt(text1);
+
+		System.out.println("Enter the C value ::");
+		String text2 = in.readLine();
+		int c = Integer.parseInt(text2);
+
+		System.out.println("The Maximum of first two numbers are " + maxi (a,b));
+
+		System.out.println("The Maximum of Given Three numbers are " + maxi (a,b,c));
+	}
+
+	static int maxi (int m , int n)
+	{
+		if (m > n)
+		return m ;
+
+		else
+		return n ;
+	}
+
+	static int maxi (int m , int n , int k)			// Overloaded Method
+		{
+			return maxi (maxi (m , n) , k);
+		}
+
+}
+
+

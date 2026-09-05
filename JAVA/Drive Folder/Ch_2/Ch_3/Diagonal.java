@@ -1,0 +1,39 @@
+// declare a matrix of 3*3 and display the digonal elements and adisplay the sum of digonal elements in the array
+
+import java.io.*;
+class Diagonal
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader in = new BufferedReader (new InputStreamReader (System.in));
+		String text ;
+		int dsum=0;
+		int a[][] = new int[3][3] ;
+		System.out.println("Enter the element one by one :: ");
+		for (int i=0 ; i<3 ; i++)
+		{
+			for (int j=0 ; j<3 ;j++)
+			{
+				text =  in.readLine();
+				a[ i ][ j ] = Integer.parseInt(text);
+			}
+		}
+		System.out.println ("Diagonal Element are ::") ;
+		for (int i=0 ; i<3 ;i++)
+		{
+			for (int j=0 ; j<3 ; j++)
+			{
+				if (i==j)
+				{
+					System.out.println("Diagonal Elements are:"+a[ i ][ j ]);
+					dsum=dsum+ a[i][j];
+				}
+			}
+			
+		}
+		System.out.println("Sum of the Diagonal Elements are:"+ dsum);
+		
+		
+	}
+
+}

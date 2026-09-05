@@ -1,0 +1,56 @@
+
+// declare a matrix of 3*3 and find the 
+
+import java.io.*;
+class Trancepose
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader in = new BufferedReader (new InputStreamReader (System.in));
+		int a[][] = new int[3][3] ;
+		int b[][] = new int[3][3] ;
+		String Text ;
+		System.out.println("Enter the element of a matrix A one by one :: ");
+		for (int i=0 ; i<3 ; i++)
+		{
+			for (int j=0 ; j<3 ;j++)
+			{
+				Text =  in.readLine();
+				a[ i ][ j ] = Integer.parseInt(Text);
+			}
+		}
+
+		System.out.println("Entered Array is :: ");
+		for (int i=0 ; i<3 ; i++)
+		{
+			for (int j=0 ; j<3 ;j++)
+			{
+				System.out.print (a[ i ][ j ] + "\t");
+			}
+			System.out.println ("\n");
+		}
+		
+		for (int i=0 ; i<3 ;i++)
+		{
+			for (int j=0 ; j<3 ; j++)
+			{
+				b[ i ][ j ] = a[ j ][ i ] ;
+			}
+		}
+		
+		System.out.println ("Elements of the Transpose are listed below : ");
+		for (int i=0 ; i<3 ;i++)
+		{
+			for (int j=0 ;j<3 ; j++)
+			{
+				System.out.print (b[ i ][ j ] + "\t");
+				 
+			}
+			
+			 System.out.println ("\n");
+		}
+		
+		
+	}
+
+}
