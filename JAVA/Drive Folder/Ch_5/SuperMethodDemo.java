@@ -1,0 +1,41 @@
+// Programm illustrate  the concept of super.MethodName
+
+
+/*		Access of Overridden method also
+		We shall do this by using super keywords
+
+		Syttax ::
+
+				super.method_name(argument1,2.,3 ,..)
+
+ */
+ 
+import java.io.*;
+class Sample1 
+{
+	void display( String s)
+	{
+		System.out.println("Class 1 student has a job : :  " + s);
+	}
+} 
+
+class Sample2 extends Sample1
+{
+	void display( String s)
+	{
+		super.display(s) ;
+		System.out.println("Class 2 student has a job : :  " + s);
+	}
+}
+class SuperMethodDemo
+{
+	public static void main(String[] args) 
+	{
+		Sample1 s1 = new Sample1();
+		s1.display("Market Analysis");
+
+		Sample2 s2 = new Sample2();
+		s2.display("Product Analysis");
+	}
+} 
+

@@ -1,0 +1,28 @@
+// Demon Stration while Statement
+import java.io.*;
+class Count
+{
+	public static void main (String args[])	 throws IOException
+	{
+
+		InputStreamReader reader = new InputStreamReader (System.in);
+		BufferedReader in = new BufferedReader (reader);
+		System.out.println("Enter the Whole No.      : : ");
+		String text = in.readLine();
+		int number = Integer.parseInt(text);		// parseInt() methods belongs to the Integer class that prdefined as a static in Integer class
+		int count = 0 ;
+		while (number != 0)				// while  loop
+			{
+				number = number / 10 ;
+				count = count + 1 ;
+			}
+		System.out.println("The Given Number is a "    + count +    "  Digit Number");
+	}
+}
+
+/*
+	OUTPUT--
+
+	 Enter the whole No.:123
+	 The Given Number is 3 Digit Number
+*/

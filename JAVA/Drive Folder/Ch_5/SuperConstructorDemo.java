@@ -1,0 +1,52 @@
+// Programm illustrate  the concept Inheritance and Constructors
+
+
+/*		A super class constructor should be executed before a subclass constructor is 
+		executed. Only then the object of a subclass will be properly initialized
+
+		We shall execute the constructor of a super class  by using the super keyword
+		in the following syntax
+
+		Syttax ::
+
+				super(arguments1,2.,3 ,..)
+
+		Note : :
+
+		The above statement should appear as the very first statement of the 
+		constructor of the class
+
+		If the subclass constructor does not call the super class constructor , 
+		the super class object is constructed with default constructor 
+
+ */
+ 
+import java.io.*;
+class Sample1 
+{
+	int k ;
+	Sample1(int i)
+	{
+		k = i ;
+	}
+} 
+
+class Sample2 extends Sample1
+{
+	int l ;
+	Sample2(int i , int j)
+	{
+		super(i);
+		l =j;
+	}
+}
+class SuperConstructorDemo
+{
+	public static void main(String[] args) 
+	{
+		Sample2 s2 = new Sample2(11,12);
+		System.out.println("Value of i in the class Sample2 :: " + s2.k);
+		System.out.println("Value of j in the class Sample2 :: " + s2.l);
+	}
+} 
+

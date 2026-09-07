@@ -1,0 +1,41 @@
+// Programm illustrate  the concept Abstract Class
+
+// Create a class called as Computercenter declare it as abstract class ,
+//define abstract method called as computerNo in that class and 
+//then define anather two different calss (Center 1 and Center2) and
+//then define main class called as Abstractclassdemo and then
+//find / calculate no. of computers present in each center
+
+import java.io.*;
+abstract class Computercenter 
+{
+	abstract int ComputerNo() ;
+} 
+class Center1 extends Computercenter
+{
+	int ComputerNo()
+	{
+		return 55 ;
+	}
+}
+
+class Center2 extends Computercenter
+{
+	int ComputerNo()
+	{
+		return 45 ;
+	}
+}
+
+class AbstractClassDemo
+{
+	public static void main(String[] args) 
+	{
+		Center1 c1 = new Center1();
+		System.out.println("No of Computer in center 1 =  " + c1.ComputerNo());
+
+		Center2 c2 = new Center2();
+		System.out.println("No of Computer in center 2 =  " + c2.ComputerNo());
+	}
+} 
+

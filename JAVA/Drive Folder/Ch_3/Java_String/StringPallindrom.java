@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+import java.lang.String;
+
+public class StringPallindrom
+{
+  public static void main(String args[])
+	{
+  		 //String str = Null;
+		in
+		 Scanner sc= new Scanner(System.in);
+		 System.out.println("Enter the string : ");
+		 String str= sc.nextLine();
+		 char[] arr = new char[str.length()];
+		 for(int i= str.length()-1,j=0; i>=0;i--,j++)       // How Are You == Output ==> arr[uoY erA woH]
+		 	arr[j] = str.charAt(i);
+		 String revstr = new String(arr);
+		 System.out.println("Reverese of the string is : "+revstr+"\n"); 
+		  boolean flag = str.equals(revstr);
+		if (flag== true)
+			System.out.println("The string is Pallindrom : \n");
+ 		else
+			System.out.println("The string is not Pallindrom : \n");
+ 	 }
+} 

@@ -1,0 +1,53 @@
+/*   WRAPER CLASSES IN JAVA ==
+
+-- Java Uses primitive data types such as int, char , double , 
+    which doesnot come under hirarchy of objects
+-- These DataType cannot be called by refrence
+-- There could be a situation in which we need to use primitive data type as a objects
+-- Java Provides wrapper class in order to use these primitive datatype as objects,
+    which encapsulates the primitive datatype within an object
+-- So Every primitive datatype has a corresponding class defined in java API class library
+
+Primitive Type			Wrapper Class
+int					Integer
+short					Short
+long					Long
+byte					Byte
+float					Float
+double				Double
+char					Character
+boolean				Boolean
+
+*/
+
+/*  EXAMPLE */
+
+import java.io.*;
+public class WrapperDemo
+{
+	public static void main(String args[])
+	{
+		Integer intwrap = new Integer(1000);	
+		Character charwrap = new Character('H');
+		int int1 = intwrap.intValue();
+		char char1= charwrap.charValue();
+		System.out.println(int1 + " " + intwrap);
+		System.out.println(char1 + " " + charwrap);
+	}
+}
+
+/* OUTPUT ;;
+F:\Ch_6>java WrapperDemo
+1000 1000
+H H
+
+In the above code  : 
+			The Following line of code Encapsulating the value within the object , this feature known as boxing.
+				Integer intwrap = new Integer(1000);	
+				Character charwrap = new Character('H');
+			AND
+			The Following line of code Extracting the value within the object , this feature known as Unboxing.
+				int int1 = intwrap.intValue();
+				char char1= charwrap.charValue();
+*/			
+			

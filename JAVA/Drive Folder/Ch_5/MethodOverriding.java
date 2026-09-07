@@ -1,0 +1,42 @@
+// Programm illustrate  the concept of Overriding Method
+
+
+/*		Overriding  and Overloading
+
+   1.. Overriding will take place only when a method in a subclass and 
+	   the corresponding method in super class have same signature
+	   ,they should have the same return type , otherwise compiler will generates error
+   2.. Overriding is different from overloading 
+		-- In case of overloading , two method in a class have same signature
+   3.. In the case of Overriding , two method decclared in two different classes have the 
+		same signature . They also have the same return type.
+   4... In overriding public type method can be overrriden by anather public type method  
+	   , this is importent			*/
+	  
+import java.io.*;
+class Q 
+{
+	void display()
+	{
+		System.out.println("Good Morning");
+	}
+} 
+class R extends Q
+{
+}
+class S extends R
+{
+	void display()
+	{
+		System.out.println("Good Afternoon");
+	}
+}
+class MethodOverriding
+{
+	public static void main(String[] args) 
+	{
+		S s1 = new S();
+		s1.display();
+	}
+} 
+

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+class employee
+{
+    void accept()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.printf("\n Enter Employee Id:");
+        int e_id = sc.nextInt();
+        System.out.printf("\n Enter Employee Name:");
+        String e_name = sc.next();
+        System.out.printf("\n Enter Basic Salary:");
+        float basic = sc.nextFloat();
+        float netsalary = this.calculate(basic);
+        System.out.printf("\n %d \n %s \n %f",e_id,e_name,netsalary);
+    }
+    float calculate(float basicsalary)
+    {
+        float DA = (154*basicsalary)/100;
+        float HRA = (10*basicsalary)/100;
+        float gross = DA+HRA+basicsalary;
+        System.out.printf("\n Gross Salary is: %f",gross);
+        float TDS= (20*gross)/100;
+        float net = gross-TDS;
+
+//        System.out.printf("\n Net Salary is: %f",net);
+        return net;
+    }
+
+}
+
+public class EmployeeSalary {
+    public static void main(String[] args) {
+        employee emp = new employee();
+        emp.accept();
+
+    }
+}

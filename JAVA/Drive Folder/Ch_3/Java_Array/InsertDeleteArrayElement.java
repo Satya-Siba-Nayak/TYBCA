@@ -1,0 +1,84 @@
+/* write a java program to insert and delete the elements from specific index */  
+
+
+import java.util.*;  
+class InsertDeleteArrayElement
+{  
+	public static void main(String[] args)   
+	{  
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter the number of elements you want to store: ");  
+
+		int n = sc.nextInt();  // Number of elements into array
+		int[] array = new int[10];  
+
+		System.out.println("Enter the elements of the array: ");  
+		for(int i=0; i<n; i++)  
+		{  
+			array[i]=sc.nextInt();  
+		}  
+		System.out.println("Array elements are: ");  
+		for (int i=0; i<n; i++)   
+		{  
+			System.out.println(array[i]+"\t");  
+		}  
+
+		System.out.print("Enter the element to insert: ");
+		int elementToInsert = sc.nextInt();
+
+		System.out.print("Enter the index where you want to insert: ");
+		int indexToInsert = sc.nextInt();
+
+		n = insertAt(array, n, elementToInsert, indexToInsert);
+
+ 		System.out.println("Array after insertion: ");
+		 for (int i = 0; i < n; i++) 
+		{
+				 System.out.print(array[i] + " ");
+		}
+		System.out.println();
+
+		System.out.print("Enter the index to delete the element from: ");
+		int indexToDelete = sc.nextInt();
+		n = deleteAt(array, n, indexToDelete);
+		System.out.println("Array after deletion: ");
+		for (int i = 0; i < n; i++) 
+		{
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+	}  
+
+	public static int insertAt(int[] array, int size, int element, int index)
+	 {
+		if (index < 0 || index > size || size >= array.length)
+		 {
+			System.out.println("Invalid index or array is full.");
+			return size;
+		}
+  		for (int i = size; i > index; i--)   	/* Shift elements to the right:*/
+		{
+  		array[i] = array[i - 1];		/* Starting from the end (size) down to the index, each element is shifted one step to the right.*/
+					/* This creates a "space" at the index position*/
+		}
+ 		array[index] = element;	// Insert element:
+		return size + 1;		// Return new size: The element is inserted at the given index, 
+					// and the size of the array (number of valid elements) increases by 1.
+	}
+
+	public static int deleteAt(int[] array, int size, int index) 
+	{
+		if (index < 0 || index >= size) 
+		{
+			System.out.println("Invalid index.");
+			return size;
+		}
+
+		for (int i = index; i < size - 1; i++)	
+		{
+			array[i] = array[i + 1];	        // Shift elements left: From the index onward, shift every element one position to the left.
+					      // This effectively "removes" the element at index
+		}
+		return size - 1;	// Return new size : The element at index is removed, and the size of the array decreases by 1.
+	}
+}

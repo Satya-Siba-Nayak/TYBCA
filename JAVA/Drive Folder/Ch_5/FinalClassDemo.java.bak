@@ -1,0 +1,42 @@
+// Programm illustrate  the concept of Final class Concept
+
+
+/*		A class that declared as final modifier cannot be extended
+		This meanse such class can not have subclass
+		i.e the method in such a class cannot be overrriden
+		
+		The abstract and final keyword are mutually exclusive.
+		Therefore a classs can be either abstract or final but not both.
+
+
+		Syttax ::
+
+				final class classname
+
+ */
+ 
+import java.io.*;
+final class Shape2D 
+{
+	void display()
+	{
+		System.out.println("Welcome to 2D Shapes ");
+	}
+} 
+
+class Triangle 
+{
+	void display()
+	{
+		System.out.println("Welcome to Triangle Enviorenment");
+	}
+}
+class FinalClassDemo
+{
+	public static void main(String[] args) 
+	{
+		Triangle t2 = new Triangle();
+		t2.display();
+	}
+} 
+

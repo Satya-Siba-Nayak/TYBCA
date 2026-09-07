@@ -1,0 +1,39 @@
+import java.io.*;
+class Employee 
+{
+	int empno ;
+	double sal, grossal , HRA ,TA , DA , PF ;
+	
+	public Employee (int no , float bassal)
+	{
+		empno = no ;
+		sal = bassal ;
+	}
+
+	public void Calculate( )
+	{
+		double  HRA = (sal * 0.15);
+		double TA = ( sal * 0.20 );
+		double  DA = ( sal * 0.25 );
+		double  PF = ( sal * 0.30 ) ;
+
+		 double grossal = sal + HRA + TA + DA - PF ;
+	}
+
+	public void Display ()
+	{
+		System.out.println("GrassSal " + grossal);
+		System.out.println("TA" + TA);
+		System.out.println("DA " + DA);
+		System.out.println("PF" + PF);
+		System.out.println("HRA " + HRA);
+	}
+
+	public static void main(String[] args) throws IOException
+	{
+		Employee e1 = new Employee (10 , 8000);
+		e1.Calculate ();
+		e1.Display ();
+		
+	}
+}

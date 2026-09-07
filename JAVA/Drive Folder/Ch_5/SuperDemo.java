@@ -1,0 +1,26 @@
+// Programm illustrate  the Hiding the Super class variable
+
+import java.io.*;
+class E
+{
+	String X = "JAVA";
+} 
+class F extends E
+{
+	String X = "COBAL";
+	void display ()
+	{
+		System.out.println( X );
+		System.out.println(super.X);
+	}
+}
+class SuperDemo
+{
+	public static void main(String[] args) 
+	{
+		F f1 = new F();
+		f1.display();
+		
+	}
+} 
+

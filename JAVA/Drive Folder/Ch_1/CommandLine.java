@@ -1,0 +1,15 @@
+
+
+import java.io.*;
+class CommandLine 
+{
+	public static void main(String[] args) throws IOException 
+	{
+		int a,b,sum;
+		a =  Integer.parseInt(args[0]);
+		b =  Integer.parseInt(args[1]);
+
+		sum = a + b ;
+		System.out.println("Addition of two command line no. are ::" + sum);
+	}
+}
