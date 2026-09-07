@@ -1,0 +1,19 @@
+// ============================================================
+// Source File : CommandLineDemo.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\CommandLineDemo.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:25
+// ============================================================
+
+import java.io.*;
+class CommandLineDemo
+{
+	public static void main(String args[])
+	{
+		System.out.println("\n command line areguments are");
+		for(int i=0; i<args.length;i++)
+		{
+			System.out.println("Args"+(i+1)+"="+args[i]);
+		}
+	}
+}

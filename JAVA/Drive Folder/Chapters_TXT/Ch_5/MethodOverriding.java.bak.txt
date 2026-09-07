@@ -1,0 +1,41 @@
+// ============================================================
+// Source File : MethodOverriding.java.bak
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_5\MethodOverriding.java.bak
+// File Type   : Backup File
+// Exported On : 2026-09-07 23:02:58
+// ============================================================
+
+// Programm illustrate  the concept of Overriding Method
+/* 1..Overriding will take place only when a method in a subclass and 
+	   the corresponding method in super class have same signature
+	   ,they should have the same return type , otherwise compiler will generates error
+   2.. Overriding is different from overloading 
+		-- In case of overloading , two me
+	  
+import java.io.*;
+class Q 
+{
+	void display()
+	{
+		System.out.println("Good Morning");
+	}
+} 
+class R extends Q
+{
+}
+class S extends R
+{
+	void display()
+	{
+		System.out.println("Good Afternoon");
+	}
+}
+class MethodOverriding
+{
+	public static void main(String[] args) 
+	{
+		S s1 = new S();
+		s1.display();
+	}
+} 
+

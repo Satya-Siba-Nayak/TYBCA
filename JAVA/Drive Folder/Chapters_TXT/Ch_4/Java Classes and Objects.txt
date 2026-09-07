@@ -1,0 +1,50 @@
+============================================================
+Source File : Java Classes and Objects.ppt
+Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_4\Java Classes and Objects.ppt
+File Type   : PowerPoint Presentation
+Exported On : 2026-09-07 23:02:54
+============================================================
+
+=== Slide 1 of 9 ===
+1
+Classes and objects
+
+=== Slide 2 of 9 ===
+2
+Classes
+General form of ClassA class contains data members and methods that act upon those data membersSimple form of class are – 	class classname	{		type 1 dataname1 ,dataname2;		{			:			:			:		}		accessSpecifier returnType methodName(argumentList1, …)		{	}	}
+
+=== Slide 3 of 9 ===
+3
+E.g.
+class Rectangle	{		int length , width ;		int rectangleArea()		{			return length * width ;			:		}		int rectanglePerimetor()		{			return  2* (length + width);	}	}
+
+=== Slide 4 of 9 ===
+4
+Creation of a Class object
+A class shall be viewed as a short template for an objectA class object is the single instance of a class that retain the structure  and behavior of the classClass is a user defined data type.We can declare the variable of this user defined class  called objects or instance of the class.The process of creating new object called as instantiation.E.g		Rectangle r1 = new Rectangle ( ) ; Here the variable r1 called as object variable . It stores the location of the new object or reference of the new objectIn Java Every value is either primitive data type value(int ,double,       boolean, and char) or an object reference .
+
+=== Slide 5 of 9 ===
+5
+Constructor
+Java  provides  a special concept called as Constructor for creating  an   object of a class and initializing its instance variable.Name of constructor method should be same as class name.It is generally declared as public.It does not have a return type , not even void.Constructors are not a methodsWe cannot invoke constructor on existing objectWe  can  only use / invoke  constructor  only in  combination  with new operator.If the constructor are not define in the class , then the Java compiler        automatically generate and execute a constructor that   has no argument Such constructor called as default constructor
+
+=== Slide 6 of 9 ===
+6
+this keyword
+Sometimes a method will need to refer the object of the class in   which it is invokedTo allow this java defines this  keywordthis can be used inside any method to refer to the current objectE.g. 		class Rectangle		{			Rectangle (int a , int b )			{				this.length= length ;				this. width= width ; 		}	}this keywords often used in constructor "this" is useful in those circumstances where there are more than one  variable with the same name .
+
+=== Slide 7 of 9 ===
+7
+Static Data Member
+A static variable is defined for a class itselfIt value does not vary from object to objectDue to this reason static variable known as Class VariableWhen we don’t initialize the static variable they will initialize	default values For  numeric type the variable will set to ZERO  		e. g static int I;			o/p  i  =0For boolean it will set as FALSE		e. g  static boolean flag			o/p  flag = false
+
+=== Slide 8 of 9 ===
+8
+Any variable name act as a reference to an object of a class will   set to NULL		e. g  static String s1 ;			o/p  s1  = null Syntax :	static data type variableName1 , name2 ,……, variableN;	e.g.		 static int count = 0;How To Refer Class Variable :: (Use  .Operator in one of the form)		className.staticVariableName ;			objectName.staticVariableName
+
+=== Slide 9 of 9 ===
+9
+Static Method
+Static method is also defined for the class itselfTherefore it does not require to create object of a class in order to invoke a static method defined in it.To invoke static method –			className.staticVariableName ( arguments ) ;			objectName.staticVariableName ( arguments ) ;
+

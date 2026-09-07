@@ -1,0 +1,28 @@
+// ============================================================
+// Source File : AsciiDemo.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\AsciiDemo.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:24
+// ============================================================
+
+import java.io.*;
+class AsciiDemo
+{
+	public static void main(String args[])
+	{
+	char ch;
+	try
+	{
+		DataInputStream dis = new DataInputStream(System.in);
+		System.out.println("Enter the character");
+		ch = (char)(dis.read());
+		System.out.println("User enterd character is "+ ch);
+		System.out.println("Ascii value of character is"+ (int)ch);
+	}
+	catch(Exception e)
+	{
+		System.out.println("Error"+e);
+	}
+		
+	}
+}

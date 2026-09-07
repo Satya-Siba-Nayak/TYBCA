@@ -1,0 +1,197 @@
+============================================================
+Source File : Intoduction to Java.pdf
+Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\Intoduction to Java.pdf
+File Type   : PDF Document (17 pages)
+Exported On : 2026-09-07 23:02:27
+============================================================
+
+--- Page 1 of 17 ---
+
+Java Evolution
+❑ Java Introduction
+❑ Java Features
+❑ How Java Differs from other OO languages
+
+--- Page 2 of 17 ---
+
+Java - An Introduction
+◼ Java - The new programming language developed by 
+Sun Microsystems (James Gosling) in 1991.
+◼ Originally called Oak.  
+◼ Java Authors: James Gosling, Arthur Van Hoff, Andy 
+Bechtolsheim
+◼  A general-purpose object-oriented language.
+◼ Designed for easy Web/Internet applications
+
+--- Page 3 of 17 ---
+
+Java - An Introduction
+◼ Originally created for consumer electronics (TV, VCR, 
+Freeze, Washing Machine, Mobile Phone).
+◼ Java - CPU  Independent language
+◼ Internet and Web was just emerging, so Sun turned it 
+into a language of Internet Programming.
+◼ It allows you to publish a webpage with Java code in it.
+
+--- Page 4 of 17 ---
+
+Year Development
+1990 Sun decided to developed special software that could be used for 
+electronic devices. A project called Green Project created and 
+head by James Gosling.
+1991 Explored possibility of using C++, with some updates announced 
+a new language named “Oak”
+1992 The team demonstrated the application of their new language to 
+control a list of home appliances using a hand held device.
+1993 The World Wide Web appeared on the Internet and transformed 
+the text-based interface to a graphical rich environment. The 
+team developed Web applets (time programs) that could run on 
+all types of computers connected to the Internet.
+Java Milestones
+
+--- Page 5 of 17 ---
+
+Java Milestones
+Year Development
+1994 The team developed a new Web browsed called “Hot 
+Java” to locate and run Applets. HotJava gained 
+instance success.
+1995 Oak was renamed to Java, as it did not survive “legal” 
+registration. Many companies such as Netscape and 
+Microsoft announced their support for Java
+1996 Java established itself it self as both 
+1. “the language for Internet programming” 
+2.  a general purpose OO language.
+1997 A class libraries, Community effort and standardization, 
+Enterprise Java, Clustering, etc.. 
+
+--- Page 6 of 17 ---
+
+Java Features
+◼ Familiar, Simple, Small
+◼ Compiled and Interpreted
+◼ Platform-Independent and Portable
+◼ Object-Oriented 
+◼ Robust and Secure
+◼ Distributed
+◼ Multithreaded 
+◼ High Performance
+◼ Dynamic and Extensible
+
+--- Page 7 of 17 ---
+
+Cont…
+◼ Familiar,Simple & small
+◼ Java does not use  Preprocessor header files, 
+goto statement and many others
+◼ no pointers
+◼ automatic garbage collection
+◼ rich pre-defined class library 
+http://java.sun.com/j2se/1.4.2/docs/api/
+
+--- Page 8 of 17 ---
+
+Cont…
+◼  Object-Oriented
+◼ focus on the data (objects) and methods 
+manipulating the data
+◼ Almost every thing in Java is Object.
+◼ all functions are associated with objects
+◼ almost all datatypes are objects (files, strings, 
+etc.)
+◼ potentially better code organization and reuse
+
+--- Page 9 of 17 ---
+
+Cont…
+◼ Platform-Independent and Portable
+◼  Java is portable.
+ 1)  Java Complier generates bytecode that can be   
+      implemented on any machine. 
+ 2)  the sizes of the primitive data types are always the same
+◼ application runs on all platforms
+
+--- Page 10 of 17 ---
+
+Cont…
+JA V A COMPILER
+JA V A BYTE CODE
+JA V A INTERPRETER
+Windows 95 Macintosh Solaris Windows NT
+(translator)
+(same for all platforms)
+(one for each different system)
+
+--- Page 11 of 17 ---
+
+Cont…
+◼ Compiled and Interpreted
+◼ java compiler generate byte-codes, not native machine code
+◼ the compiled byte-codes are platform-independent
+◼ java bytecodes are translated on the fly to machine readable 
+instructions in runtime (Java Virtual Machine)
+
+--- Page 12 of 17 ---
+
+Cont…
+Text Editor Compiler Interpreter
+Programmer
+Source Code
+.java file
+Byte Code
+.class file
+Hardware and 
+Operating System
+Notepad, vi javac java
+appletviewer
+netscape
+
+--- Page 13 of 17 ---
+
+Cont…
+◼ Robust and Secure
+◼ usage in networked environments requires more security
+◼ Provides many safeguard  to ensure reliable code.
+◼ Strict compile time & run time type checking.
+◼ memory allocation model is a major defense
+◼ access restrictions are forced (private, public)
+ 
+
+--- Page 14 of 17 ---
+
+Cont…
+◼ Distributed
+◼ Designed as distributed lang.  For creating 
+application on network.
+◼ Java program can access remote access remote 
+objects on internet
+
+--- Page 15 of 17 ---
+
+Cont…
+◼ Multithreaded 
+◼ Handles multiple task simulteniously
+◼ Java tools support multiprocess synchronization.
+
+--- Page 16 of 17 ---
+
+How Does Java Compares to 
+C++ and Other OO Languages
+C
+C++
+Java
+
+--- Page 17 of 17 ---
+
+Java better than C  ?
+◼ No  Preprocessor
+◼ No  Global Variables
+◼ No data types struct, union and enum
+◼ No Goto ,size of and typedef  
+◼ No type modifier keywords 
+uto,extern,register,signed and unsigned.
+◼ No Pointers
+◼ Add new operator instanceof and >>>
+◼ Add labelled break and continue
+    
+

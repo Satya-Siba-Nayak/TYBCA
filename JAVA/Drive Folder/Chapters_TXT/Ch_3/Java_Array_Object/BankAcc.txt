@@ -1,0 +1,49 @@
+// ============================================================
+// Source File : BankAcc.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_3\Java_Array_Object\BankAcc.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:47
+// ============================================================
+
+import java.util.Scanner;
+class Bank{
+    int accno,bal;
+    String custname;
+    Scanner sc=new Scanner(System.in);
+    Bank(String custname,int accno,int bal)
+    {
+        this.custname=custname;
+        this.accno=accno;
+        this.bal=bal;
+    }
+    void display()
+    {
+        System.out.println("Customer Name : "+custname);
+        System.out.println("Account No. : "+accno);
+        System.out.println("Balance : "+bal);
+    }
+    void withdraw()
+    {
+        System.out.println("Enter emount you want to withdraw : ");
+        int wd=sc.nextInt();
+        bal=bal-wd;
+        System.out.println("Balance after withdraw:"+bal);
+    }
+    void deposit()
+    {
+        System.out.println("Enter amount to be deposited : ");
+        int dep=sc.nextInt();
+        bal=bal+dep;
+        System.out.println("Balance after deposit:"+bal);
+    }
+}
+
+public class BankAcc {
+    public static void main(String args[])
+    {
+        Bank ob=new Bank("Mayank",113003201,68000);
+        ob.display();
+        ob.withdraw();
+        ob.deposit();
+    }
+}

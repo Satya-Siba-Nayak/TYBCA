@@ -1,0 +1,75 @@
+// ============================================================
+// Source File : Calculation.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_2\Constructor\Calculation.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:39
+// ============================================================
+
+/*===> Constructor and function
+It is special function in java (i.e name of the class and function is same),IT never retrun anything , eventhogh void is not possible 
+==> It return the Object of the class
+*/
+import java.io.*;
+import java.util.*;
+class Calculation
+{
+	public static void main(String args[])
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter no1");
+		int no1= sc.nextInt();
+		System.out.println("Enter no2");
+		int no2= sc.nextInt();
+
+		Addition a1= new Addition(no1,no2);
+		int sub = a1.Substraction(no1,no2);
+		System.out.println("Substarction  is "+sub);
+		
+		Multiplication m1= new Multiplication();
+		int multiplication = m1.multi(no1,no2);
+		System.out.println("Multiplication  is "+multiplication);
+		
+		Calculation c1= new Calculation(no1,no2);
+		c1.Division(number1,number2);
+		public Calculation(int no1,no2)
+		{
+			int number1= no1;
+			int number2= no2;	
+		}
+		void Division(int number1,int number2)
+		{
+			this.number1= number1;
+			this.number2= number2;
+			int res=number1/number2;
+			System.out.println("Divisionis "+res);
+		}
+		
+	}
+}
+
+class Addition
+{
+	public Addition(int no1,int no2)
+	{
+		int a= no1;
+		int b= no2;
+		int res= a+b;
+		System.out.println("Addition is "+res);
+	}
+	int Substraction(int no1,int no2)
+	{
+		int a= no1;
+		int b= no2;
+		int res= b-a;
+		return res;
+		
+	}
+}
+class Multiplication
+{
+	int multi(int a, int b)
+	{
+		int multiplicate = a*b;
+		return multiplicate;
+	}
+}

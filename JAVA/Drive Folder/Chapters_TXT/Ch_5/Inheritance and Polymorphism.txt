@@ -1,0 +1,62 @@
+============================================================
+Source File : Inheritance and Polymorphism.pdf
+Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_5\Inheritance and Polymorphism.pdf
+File Type   : PDF Document (4 pages)
+Exported On : 2026-09-07 23:02:58
+============================================================
+
+--- Page 1 of 4 ---
+
+Java
+ Computer Industry Lab.
+1
+Inheritance and 
+polymorphism
+
+--- Page 2 of 4 ---
+
+Java
+ Computer Industry Lab.
+2
+❑
+ Inheriting Variable in a class
+◼ Inheritance “It is an activity of an deriving a new class from a
+n  old class ”
+◼ We use the concept of inheritance to achieve significance     
+of code reuse
+◼ Base class / parent class / super class concept
+◼ Derived class  / subclass / child class concept.
+◼ We can Inherit all the instance variable from Super class
+◼ We shall also define new instance variable in the subclass
+◼ If Newly define variable name are same variable name in 
+super class  it  , shadows the super class variable
+
+--- Page 3 of 4 ---
+
+Java
+ Computer Industry Lab.
+3
+◼ Use the extends keyword to inherit the functionality and fea
+tures from super class to subclass
+e.g.
+class A {
+--- ; 
+statements;
+--- ;
+}
+class B extends A
+{
+--- ;
+Statements ;
+--- ; 
+}
+
+--- Page 4 of 4 ---
+
+Java
+ Computer Industry Lab.
+4
+❑
+Inheriting the method in a class
+◼ When we define methods for a subclass 
+

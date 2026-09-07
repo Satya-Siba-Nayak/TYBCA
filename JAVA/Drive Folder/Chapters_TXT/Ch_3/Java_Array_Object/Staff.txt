@@ -1,0 +1,66 @@
+// ============================================================
+// Source File : Staff.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_3\Java_Array_Object\Staff.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:47
+// ============================================================
+
+import java.util.Scanner;
+
+class staff_details
+{
+    	String name,birth_date,desig;
+    	float salary;
+  	 staff_details(String name, String birth_date, String desig, float salary)
+   	 {
+        		this.name = name;
+        		this.birth_date = birth_date;
+        		this.desig = desig;
+        		this.salary = salary;
+    	}
+    	void display()
+    	{
+        		System.out.printf("\n Name: \n Birth Date:  \n Designation:  \n Salary: "+ name+ birth_date+ desig+salary);
+    	}
+}
+public class Staff 
+{
+	public static void main(String[] args) 
+		{
+        			float max_sal=0;
+        			Scanner sc = new Scanner(System.in);
+        			staff_details sd[] = new staff_details[2];
+        			for(int i=0;i<2;i++)
+        			{
+            				System.out.printf("\n Enter Name:");
+           	 			String name = sc.next();
+            				System.out.printf("\n Enter Birth Date:");
+            				String birth_date = sc.next();
+            				System.out.printf("\n Enter Designation:");
+            				String desig = sc.next();
+            				System.out.printf("\n Enter Salary:");
+            				float salary = sc.nextFloat();
+            				sd[i] = new staff_details(name,birth_date,desig,salary);   // Array object
+        			}
+        			for(int i=0;i<2;i++)
+        			{
+            				sd[i].display();
+        			}
+        			for (int i=0;i<2;i++)
+        			{
+				if(sd[i].salary > max_sal)
+            				{
+					max_sal = sd[i].salary;
+            				}
+        			}
+        			for (int i=0;i<2;i++)
+        			{
+            				System.out.printf("\n Employee with highest Salary:");
+            				if(sd[i].salary == max_sal)
+            				{
+                					//System.out.println("\n Name: % \n Birth Date:  \n Designation:  \n Salary: "+ sd[i].name+sd[i].birth_date+sd[i].desig+sd[i].salary);
+					System.out.println(sd[i].name+" \t"+sd[i].salary);	
+            				}
+       	 		}
+    		}
+}

@@ -1,0 +1,38 @@
+// ============================================================
+// Source File : HelloScaneer.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\HelloScaneer.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:27
+// ============================================================
+
+import java.io.*;
+import java.util.*;
+class HelloScaneer
+{
+	public static void main(String args[]) throws IOException	// Any Input is in read as a String in Java
+	{
+		
+		//Scanner sc = new Scanner(System.in);
+		//System.out.println("Enter Number one::");
+		//int num1 = sc.nextInt();
+
+		//System.out.println("Enter Number two::");
+		//int num2 = sc.nextInt();
+		//int res = num1+num2;
+
+		//System.out.println("Your number one is::" + num1);
+		
+
+		InputStreamReader reader = new InputStreamReader(System.in);	// Acccept String Input From Keyboard
+		BufferedReader in = new BufferedReader (reader);				// Buffers the String Input
+		
+		System.out.println("Enter Number one::");
+			int no1= Integer.parseInt(in.readLine());
+		System.out.println("Enter Number two::");
+			int no2=Integer.parseInt(in.readLine());
+		int res = no1+no2;
+		System.out.println("Your Addition is::" + res);
+		//String name = in.readLine();				// String DataType
+		//System.out.println("Your name is::" + name);
+	}
+}

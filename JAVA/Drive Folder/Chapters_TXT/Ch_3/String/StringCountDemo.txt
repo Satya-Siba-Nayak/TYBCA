@@ -1,0 +1,32 @@
+// ============================================================
+// Source File : StringCountDemo.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_3\String\StringCountDemo.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:51
+// ============================================================
+
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+import java.lang.String;
+
+public class StringCountDemo
+{
+  public static void main(String args[])
+	{
+  		 String searchFor = "This";
+ 		 String base = "This is This method";
+ 		 int len = searchFor.length();
+ 		 int result = 0;
+ 		 if (len > 0)
+		 {  
+  			int start = base.indexOf(searchFor);
+  			while (start != -1) 
+			{
+  				result++;
+  				start = base.indexOf(searchFor, start+len);
+  			}
+		 }
+  		 System.out.println(result);
+ 	 }
+} 

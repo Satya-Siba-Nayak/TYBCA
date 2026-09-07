@@ -1,0 +1,44 @@
+// ============================================================
+// Source File : InherMethodDemo.java.bak
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_5\InherMethodDemo.java.bak
+// File Type   : Backup File
+// Exported On : 2026-09-07 23:02:58
+// ============================================================
+
+// Programm illustrate  the inheritance of a Method
+
+import java.io.*;
+class Q 
+{
+	void display1()
+	{
+		System.out.println("Good Morning");
+	}
+
+	void display2()
+	{
+		System.out.println("Good Afternoon");
+	}
+} 
+class R extends Q
+{
+}
+class S extends R
+{
+	void display3()
+	{
+		System.out.println("Good Evening");
+	}
+}
+class InherMethodDemo
+{
+	public static void main(String[] args) 
+	{
+		S s1 = new S();
+		s1.display1();
+		s1.display2();
+		s1.display3();
+
+	}
+} 
+

@@ -1,0 +1,384 @@
+============================================================
+Source File : 1272250271.rtf
+Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\1272250271.rtf
+File Type   : Rich Text Format (RTF)
+Exported On : 2026-09-07 23:02:24
+============================================================
+
+ VANSHIKA RADADIYA - 1272250271
+ ASSIGNMENT - 1
+
+
+Q1 ) 
+
+import java.util.*;
+class Q1{
+
+public int sum(int a, int b){
+	return a+b;
+}
+public int sub(int a, int b){
+	return a-b;
+}
+public int mul(int a, int b){
+	return a*b;
+}
+public int div(int a,int b){
+	return a/b;
+}
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); // A > B
+	System.out.println("Enter value of A(A > B) : ");
+	int a = sc.nextInt();
+	System.out.println("Enter value of B(A > B) : ");
+	int b = sc.nextInt();
+
+	Q1 obj = new Q1();
+	System.out.println("Sum is : "+ obj.sum(a,b));
+	System.out.println("Subtraction is : "+ obj.sub(a,b));
+	System.out.println("Multiplication is : "+ obj.mul(a,b));
+	System.out.println("Division is : "+ obj.div(a,b));
+	
+
+}
+}
+
+
+Q2) 
+
+import java.util.*;
+class Q2{
+
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q2 obj = new Q2();
+	System.out.println("Enter input count: ");
+	
+	int n = sc.nextInt();
+	int sum = 0;
+
+	for(int i = 0; i < n; i++){
+		int x = sc.nextInt();
+		sum += x;
+	}
+	
+	System.out.println("Avg is : "+ sum/n);
+	
+
+}
+}
+
+
+
+Q3)
+
+import java.util.*;
+class Q3{
+
+public void decToBinary(int num){
+
+	int[] arr = new int[10];
+	int cnt = 0;
+	while(num > 0){
+		int rem = num % 2;
+		arr[cnt] = rem;
+		num /= 2;
+		cnt++;
+	}
+	
+	for(int i = cnt-1; i >=0; i--){
+		System.out.print(arr[i]);
+	}
+	
+}
+
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q3 obj = new Q3();
+	System.out.println("Enter Number : ");
+	int num = sc.nextInt();
+	obj.decToBinary(num);
+	
+	
+}
+}
+
+
+
+Q4)
+
+import java.util.*;
+class Q4{
+
+public int BinToDec(String s){
+	int num = 0;
+	int Base = 1;
+	int i = s.length()-1;
+	while(i >= 0){
+		if(s.charAt(i) == '1'){
+			num += Base;
+		}
+		Base *= 2;
+		i--;
+	}
+	
+	return num;
+	
+}
+
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q4 obj = new Q4();
+	System.out.println("Enter Binary Number : ");
+	String num = sc.nextLine();
+	System.out.println("Binary to Decimal : " + obj.BinToDec(num));
+	
+	
+}
+}
+
+
+
+Q5)
+
+import java.util.*;
+class Q5{
+
+public int sumOfDig(int num){
+	int sum = 0;
+	while(num > 0){
+		sum += (num % 10);
+		num/= 10;
+	}
+	
+	return sum;
+}
+
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q5 obj = new Q5();
+	System.out.println("Enter Number : ");
+	int num = sc.nextInt();
+	System.out.println("sum of Digits is : "+ obj.sumOfDig(num));
+	
+	
+}
+}
+
+
+
+//compare two numbers
+//count letter, spaces, other character, numbers of input string
+//compute sum of first 100 prime numbers
+//swap first and last element of array , create new array
+
+Q6)
+
+import java.util.*;
+class Q6{
+
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q6 obj = new Q6();
+	System.out.println( "Enter value : " );
+	int a = sc.nextInt();
+	System.out.println( "Enter value : " );
+	int b = sc.nextInt();
+	
+	if(a > b){
+		System.out.println(a + " is greater than " + b);
+	}
+	else if(a < b){
+		System.out.println(a + " is lesser than " + b);
+	}
+	else {
+		System.out.println(a + " is equal to  " + b);
+	}
+	
+	
+}
+}
+
+
+
+Q7)
+
+import java.util.*;
+class Q7{
+
+
+public static void main(String[] args){
+	Scanner sc = new Scanner(System.in); 
+
+	Q7 obj = new Q7();
+	System.out.println( "Enter String: " );
+	String str = sc.nextLine();
+
+	int numbers = 0, letters = 0, spaces = 0, other_char = 0;
+	for(int i = 0; i < str.length(); i++){
+		if(str.charAt(i) >= '0' && str.charAt(i) <= '9'){
+			numbers++;
+		}
+		else if(str.charAt(i) >= 'a' && str.charAt(i) <= 'z'){
+			letters++;
+		}
+		else if(str.charAt(i) >= 'A' && str.charAt(i) <= 'Z'){
+			letters++;
+		}
+		else if(str.charAt(i) == ' ' ){
+			spaces++;
+		}
+		else{
+			other_char++;
+		}
+	}
+
+	System.out.println("letters are : " + letters);
+	System.out.println("numbers are : " + numbers);
+	System.out.println("spaces are : " + spaces);
+	System.out.println("other characters are : " + other_char);
+	
+	
+	
+	
+}
+}
+
+
+
+
+Q9)
+
+import java.util.*;
+class Q9{
+public static void main(String args[]){
+	int n = 1000;
+	int[] arr = new int[n];
+	for(int i =0; i < n; i++){
+		arr[i] = 0;
+	}
+
+	for(int i = 2; i < n; i++){
+		for(int j = 2; j < i; j++){
+			if(i % j == 0){
+				arr[i] = 1;
+				break;
+			}
+			
+		}
+	}
+	
+	int sum = 0;
+	int cnt = 0;
+	for(int i = 2; i < n; i++){
+		if(arr[i] == 0){
+			System.out.print(i + " ");
+			sum += i;
+			cnt++;
+		}
+		if(cnt >= 100)break;
+	}
+	System.out.println("\n sum of first 100 prime number is " + sum);
+}
+}
+
+
+
+
+Q10)
+
+import java.util.*;
+class Q10{
+public static void main(String args[]){
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter n : ");
+	int n = sc.nextInt();
+
+	int[] arr = new int[n];
+	int[] arr1 = new int[n];
+	System.out.println("Enter "+n+" values : ");
+	for(int i =0; i < n; i++){
+		int x=  sc.nextInt();
+		arr[i] = x;
+		arr1[i] = x;
+	}
+
+	System.out.print("Before swap : ");
+	for(int i = 0; i < n; i++){
+		System.out.print(arr[i]+ " ");
+	}
+	
+	int temp = arr1[0];
+	arr1[0] = arr[n-1];
+	arr1[n-1] = temp;
+	System.out.print("\n After swap : ");
+	for(int i = 0; i < n; i++){
+		System.out.print(arr1[i]+ " ");
+	}
+
+		
+}
+}
+
+
+
+Q) Palindrome
+
+import java.util.*;
+class palindrome{
+public static void main(String args[]){
+	Scanner sc = new Scanner(System.in);
+	System.out.print("Enter number : ");
+	int num = sc.nextInt();
+	
+	int n = num;
+	int reverse = 0;
+	
+	while(n > 0){
+		int digit = n % 10;
+		reverse *= 10;
+		reverse += digit;
+		n /= 10;
+	}
+
+	if(reverse == num){
+		System.out.println("Number is Palindrome ");
+	}
+	else{
+		System.out.println("Number is Not Palindrome ");
+	}
+}
+}
+
+
+
+Q) command line argument max
+
+import java.util.*;
+class cmd{
+public static void main(String args[]){
+	int sum = 0;
+	for(int i = 0; i < args.length; i++){
+		int num = Integer.parseInt(args[i]);
+		sum += num;
+	}
+	System.out.println("sum is : " + sum);
+}
+}
+
+
+
+
+
+

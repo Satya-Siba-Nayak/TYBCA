@@ -1,0 +1,58 @@
+============================================================
+Source File : StringClassMethods.ppt
+Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_3\Java_String\StringClassMethods.ppt
+File Type   : PowerPoint Presentation
+Exported On : 2026-09-07 23:02:48
+============================================================
+
+=== Slide 1 of 9 ===
+Strings
+
+=== Slide 2 of 9 ===
+Strings
+A  string represent group of characterString written in java are all String class objectsString class objects are immutable(can not be modified)because time taken by the JVM to reallocate memory and add data to an existing object is more than the time taken to create a new objectJava defines the string class which is part of the  java.lang  package.C, C++ implement String as a character array where as in Java  Character Array and String are different
+
+=== Slide 3 of 9 ===
+String(char array[ ]);String(char array[ ], int start ,  int count ) ;String(String object);
+Constructors of String class with character  array and String object
+
+=== Slide 4 of 9 ===
+Methods of the String class
+Sr.No | Method Name | Description
+1 | Char charAt(int index) | Returns the character at specified index.Other wise return StringIndexOutOfBoundException
+2 | Void getChars(int sourcebegin , int sourceend , char[] destination , int destinationbegin) | This method will copy (sourceend-sourcebegin) – 1 number of characters starting from the destinationbeginin the case of error it will throw StringIndexOutOfBoundException and the NullPointerException
+3 | Byte[ ] getBytes() | Returns the byte array of the specified string.
+4 | boolean equals(String str) | Returns true if the String object specified using str is equal to the invoking string . Otherwise return falsee.g. str1.equals(str2)
+
+=== Slide 5 of 9 ===
+5 | boolean  equalsIgnoreCase(String str) | This method will do the same as the equals() except that it will ignore the case
+6 | Int compareTo(String str) | It will return positive integer value if the String object str  is less than invoking String . Return Negative integer value If  str  is greater than invoking String  and return 0 if both are equals.
+7 | Int compareToIgnoreCase(String str) | This method will do the same as the comareTo() except that it will ignore the case
+8 | boolean startsWith(String str)boolean startsWith(String str , int index) | It will return true if invoking string starts with string str . The Second version of this method  will compare the invoking string with str  from index  which specified
+9 | boolean endsWith(String str)boolean endsWith(String str , int index) | It will return true if invoking string ends with string str . The Second form of this method  will compare str  from index  which specified
+
+=== Slide 6 of 9 ===
+10 | Int indexOf(Char ch)Int indexOf(Char ch , int index) | It will return the index of first occurrence of the charater specified by ch.In the second form index will specify the start index and goes through the end of the string
+11 | String concat(String str) | This method will return string in which str is concatenated with the invoking string
+12 | String replace(char oldcharacter ,char newcharater) | It will return the string with old charater replaced by new charater
+13 | String trim() | It will return the string by removing left most and right most white spaces
+14. | String toLowerCase() | Returns the string which contain only lowercase
+15 | String toUpperCase() | Returns the string which contain only uppercase
+16 | Int length() | Returns the length of the string on which it is invoked
+
+=== Slide 7 of 9 ===
+StringBuffer ClassAn object of String class is immutableIn order to achieve mutability java provide a class call StringBufferWhen ever + (concatination) operator is used on String objects , the string object will changed into an instance of StringBuffer and its  append() method is called on that instance of StringBuffer. After that StringBuffer is changed into String by using toString()     method of the Object class StringBuffer also facilitates the insertion of a character in the middle of the string
+
+=== Slide 8 of 9 ===
+6.	Whenever the size of the StringBuffer is not specified , it will allocate 16 additional characters7.	Constructor of StringBuffer classStringBuffer()StringBuffer(int size)StringBuffer(String str)    --  it will cerate String buffer with the                                                          String object8.	StringBuffer support all the methods are supported by String
+
+=== Slide 9 of 9 ===
+There are some methods which are not supported by String Class    (That methods belongs to StringBuffer class )
+01 | StringBuffer append(char[ ] ,int starts,int length) | This method will append character array at the position start  to the length of characters to StringBuffer
+02 | Int capacity( ) | It will return the total capacity of StringBuffer.
+03 | StringBuffer reverse() | Returns the StringBuffer which is reversed in order compared with original one
+04 | StringBuffer deleteCharAt(int index) | Returns the StringBuffer  by removing the character at specified index
+05 | StringBuffer insert(int index     ,char c) | This method will insert a character at  specified index and returns the StringBuffer
+06 | Void setCharAt(int index , char ch) | It will replace the character at index by the character ch in the StringBuffer
+07 | Void setLength(int size) | Set the length of StrinBuffer to size
+

@@ -1,0 +1,27 @@
+// ============================================================
+// Source File : demo1.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\demo1.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:30
+// ============================================================
+
+import java.io.*;
+class demo1
+{
+public static void main(String args[])
+	
+	{
+		System.out.println("Hi I am Here");
+	}
+
+}
+
+
+/* Output -- 
+
+F:\MCA JAVA Final\All_Chapters\JavaExample\Ch_1>javac demo1.java
+
+F:\MCA JAVA Final\All_Chapters\JavaExample\Ch_1>java demo1
+Hi I am Here
+
+*/

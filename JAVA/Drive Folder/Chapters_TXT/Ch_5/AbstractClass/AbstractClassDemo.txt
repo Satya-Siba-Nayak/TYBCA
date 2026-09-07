@@ -1,0 +1,67 @@
+// ============================================================
+// Source File : AbstractClassDemo.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_5\AbstractClass\AbstractClassDemo.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:03:01
+// ============================================================
+
+// Programm illustrate  the concept Abstract Class
+
+/* A class for which we can not create object is called as an abstract class
+   . An abstract class is to be extended and then instantiated
+   Abstract class contains abstract as well as non-abstract methods
+   
+   Some of the method in an abstract class should be declare as abstract . 
+   such abstract methods  consist of a method declaration without any body 
+   as shown in below example  */
+
+/* All abstract methods that are declare in an abstract class should be 
+   implemented by the class that extends this abstract class .
+   Otherwise , that subclass itself should be declare as abstract. */
+
+/* A class that can be instantiated is known as Concrete class. 
+   Therefore Subclasses of an abstract class , They all are Concrete class */
+
+/* Create a class called as Computercenter declare it as abstract class ,
+   define abstract method called as computerNo in that class and 
+   then define anather two different calss (Center 1 and Center2) and
+   then define main class called as Abstractclassdemo and then
+   find / calculate no. of computers present in each center */
+
+import java.io.*;
+abstract class Computercenter 
+{
+	abstract int ComputerNo() ;
+	//diplay()
+	//{
+		
+	//}
+} 
+class Center1 extends Computercenter
+{
+	int ComputerNo()
+	{
+		return 55 ;
+	}
+}
+
+class Center2 extends Computercenter
+{
+	int ComputerNo()
+	{
+		return 45 ;
+	}
+}
+
+class AbstractClassDemo
+{
+	public static void main(String[] args) 
+	{
+		Center1 c1 = new Center1();
+		System.out.println("No of Computer in center 1 =  " + c1.ComputerNo());
+
+		Center2 c2 = new Center2();
+		System.out.println("No of Computer in center 2 =  " + c2.ComputerNo());
+	}
+} 
+

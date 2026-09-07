@@ -1,0 +1,85 @@
+// ============================================================
+// Source File : StringNotesProgram.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_3\String\StringNotesProgram.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:51
+// ============================================================
+
+/* String in java====>
+==============================================================
+What is string?
+String is predefined class in java ,
+It is used to perform all string operation
+but the String class is immutable(we can not change / modify the string)
+
+===============================================================
+modify /change string it is achieved by using anather two classes  StringBuffer or StringBuilder class.....
+==>
+If String is a class then it contains set of Costructors and Functions/ Methods in the String and StringBuffer  and StringBuilder class
+==
+String Constructor==>
+		String(char array[ ]);
+		String(char array[ ], int start ,  int count) ;
+		String(String object);
+
+
+String Functions or Methods ==>
+		Char charAt(int index)
+		Void getChars(int sourcebegin , int sourceend , char[] destination , int destinationbegin)
+		boolean equals(String str)
+		boolean  equalsIgnoreCase(String str)
+		Int compareTo(String str)
+		Int compareToIgnoreCase(String str)
+
+
+
+
+Strin str= ["Hi Hello How are you"]
+	o/p ==> Hello
+str.getChars(int 3,int 8,char[- - - - - ] HElloArray, int 0)  
+===============================================================
+*/
+
+/* Example Demonstrte getChar() method of String Class */
+
+import java.util.*;
+import java.io.*;
+import java.lang.String;
+public class StringNotesProgram
+{
+  public static void main(String[] args)throws IOException
+	{
+  		String str1 = "Hi Abhjit how are you";
+		String str2 = "Hi abhjit how are you";
+		char ch= str1.charAt(5);
+		System.out.println("The retrived character is:   "+ch);
+  		char[] arr = new char[7];
+  		//Syntax is ** getChar(int sourcebegin int sourceend,char[] destination , int destinationbegin)
+		str1.getChars(3, 9, arr, 0);
+  		System.out.print("The retrived String is:     ");
+		System.out.println(arr);
+  		
+
+		//Check String equality
+		boolean check= str1.equals(str2);
+		System.out.println("Is two Strings found Equal  "+check);
+
+		// Check String equality by ibnoring case(Upper case and lower case)
+		boolean check1= str1.equalsIgnoreCase(str2);
+		System.out.println("Is two Strings found Equal  "+check1);
+		
+		// Check String using CompareTO()
+		
+		int comare= str1.compareTo(str2);
+		System.out.println("Output after applying compareTo function    "+comare);
+		
+		// Check String using compareToIgnoreCase()
+		
+		int comare1= str1.compareToIgnoreCase(str2);
+		System.out.println("Output after applying compareToIgnoreCase function    "+comare1);
+
+		// String concat
+		String str3= str1.concat(str2);
+		System.out.println("String concatinate is  "+str3);
+ 	 }
+}

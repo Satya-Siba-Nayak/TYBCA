@@ -1,0 +1,32 @@
+// ============================================================
+// Source File : Cube.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_2\Ch_3\Cube.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:35
+// ============================================================
+
+
+// Program to find the cube of a given no using FUNCTION / METHOD
+
+import java.io.*;
+class Cube
+{
+	public static void main (String args[]) throws IOException
+	{
+		BufferedReader in = new BufferedReader (new InputStreamReader (System.in));
+		System.out.println("Enter the no ::");
+		String text = in.readLine();
+		int n = Integer.parseInt(text);
+		System.out.println("The Cube of thr given no is :: " + cube (n));
+	}
+
+	static int cube (int m)
+	{
+		int result ;
+		result = m * m * m ;
+		return result ;
+	}
+
+}
+
+

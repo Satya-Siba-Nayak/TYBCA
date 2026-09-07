@@ -1,0 +1,41 @@
+// ============================================================
+// Source File : getCharDemo.java
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_2\Ch_3\String\getCharDemo.java
+// File Type   : Java Source Code
+// Exported On : 2026-09-07 23:02:38
+// ============================================================
+
+/* Example Demonstrte getChar() method of String Class */
+
+import java.util.*;
+import java.io.*;
+import java.lang.String;
+public class getCharDemo
+{
+  public static void main(String[] args)throws IOException
+	{
+  		String str1 = "Hi Abhjit how are,I am fine";
+		String str2 = "Hi Abhjit how are you";
+  		char[] arr = new char[7];
+  		//Syntax is ** getChar(int sourcebegin int sourceend,char[] destination , int destinationbegin)
+		str1.getChars(3, 9, arr, 0);
+  		System.out.print("The retrived String is: ");
+  		System.out.println(arr);
+		
+		// Check String equality
+		boolean check;
+		check= str1.equals(str2);
+		System.out.println("Output after applying equals function       "+check);
+
+		// Check String equality by ignoring uppercase and lowercase
+		boolean check1;
+		check1= str1.equalsIgnoreCase(str2);
+		System.out.println("Output after applying equalsIsIgnore function      "+check1);
+
+		// CompareTO()
+		
+		int comare= str1.compareTo(str2);
+		System.out.println("Output after applying compareTo function       "+comare);
+		
+ 	 }
+}

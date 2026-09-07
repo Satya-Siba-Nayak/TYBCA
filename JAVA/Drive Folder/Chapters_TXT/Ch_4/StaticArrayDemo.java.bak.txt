@@ -1,0 +1,30 @@
+// ============================================================
+// Source File : StaticArrayDemo.java.bak
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_4\StaticArrayDemo.java.bak
+// File Type   : Backup File
+// Exported On : 2026-09-07 23:02:56
+// ============================================================
+
+// Programm illustrate  a use of static initialize block
+
+import java.io.*;
+class Block
+{
+	static int [] x ;
+	static 
+	{
+		x = new int [5];
+		for (int i=0 ; i<5 ; i++ )
+			x[i] = i
+	}
+} 
+class StaticArrayDemo
+{
+	public static void main(String[] args) 
+	{
+		for (int i=0 ; i<5 ;i++ )
+			System.out.println (Block.x[i]);
+
+	}
+} 
+

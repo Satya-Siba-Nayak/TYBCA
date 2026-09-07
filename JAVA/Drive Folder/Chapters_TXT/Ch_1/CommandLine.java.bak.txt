@@ -1,0 +1,22 @@
+// ============================================================
+// Source File : CommandLine.java.bak
+// Original Path: C:\Users\ssnay\Documents\Github\TYBCA\JAVA\Drive Folder\Ch_1\CommandLine.java.bak
+// File Type   : Backup File
+// Exported On : 2026-09-07 23:02:25
+// ============================================================
+
+// Passing command line argument to the main method
+
+import java.io.*;
+class CommandLine 
+{
+	public static void main(String[] args) throws IOException 
+	{
+		int a,b,sum;
+		a =  Integer.parseInt(args[0]);
+		b =  Integer.parseInt(args[1]);
+
+		sum = a + b ;
+		System.out.println("Addition of two command line no. are ::" + sum);
+	}
+}
